@@ -8,6 +8,7 @@ Requires at least: 2.2
 A very usefull Wordpress Plugin. It unites much functions and patches in-one.
 
 == Description ==
+
 This plugin unites much functions and patches in-one.  Now there is no necessity download set of separate plugins, it is possible to take advantage of one, and already in it to choose necessary functions. At present it unites in itself the following:
 
 1. Replace WP-Version;
@@ -39,10 +40,12 @@ See the [Plugin homepage](http://www.infine.ru/support/wp_plugins/wp-all-in-one-
 1. Admin options page.
 
 == Updates ==
+
 See the:
 [Plugin Homepage](http://www.infine.ru/support/wp_plugins/wp-all-in-one-tools.htm)
 and
 [Plugin Revision](http://wordpress.org/extend/plugins/wp-all-in-one-tools/)
 
 == Thanks ==
+
 I would sincerely like to thank Ann, my great love of my life.
