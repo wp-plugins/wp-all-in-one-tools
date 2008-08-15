@@ -20,7 +20,7 @@ This plugin unites much functions and patches in-one.  Now there is no necessity
 6. Minimum Comment Length;
 7. Iodized_Salt;
 
-Coming soon:
+Comeing soon:
 
 1. Get_Theme;
 2. Image Upload HTTP Error Fix;
