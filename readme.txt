@@ -27,11 +27,15 @@ Coming soon:
 See the [Plugin homepage](http://www.infine.ru/support/wp_plugins/wp-all-in-one-tools.htm) for further information.
 
 == Installation ==
+
+3 Steps:
+
 1. Unzip archive and upload to the '/wp-content/plugins/' directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Go to /wp-admin/options-general.php?page=wp-all-in-one-tools/wp-all-in-one-tools.php page for congigurate
 
 == Screenshots ==
+
 1. Admin options page.
 
 == Updates ==
