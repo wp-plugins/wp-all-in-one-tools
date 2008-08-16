@@ -45,8 +45,9 @@ See the [Plugin homepage](http://www.infine.ru/support/wp_plugins/wp-all-in-one-
 
 == Screenshots ==
 
-1. Admin options page (in english).
-1. Admin options page (in russian).
+For more screenshots, please, check [Plugin Homepage](http://www.infine.ru/support/wp_plugins/wp-all-in-one-tools.htm)
+
+1. Admin options page (small preview in english).
 
 == Updates ==
 
