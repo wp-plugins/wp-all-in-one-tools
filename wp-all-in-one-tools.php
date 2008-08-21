@@ -4,12 +4,12 @@ Plugin Name: WP All-in-One tools
 Plugin URI: http://www.infine.ru/support/wp_plugins/wp-all-in-one-tools.htm
 Description: Collection of more usefull plugins and functions for WordPress (secure, feed, patches etc.)
 Author: Nikolay aka 'cmepthuk'
-Version: 0.3
+Version: 0.3.1
 License: GPL
 Author URI: http://infine.ru/
 */
 
-define('AIO_VERSION', '0.3');
+define('AIO_VERSION', '0.3.1');
 
 ### Die if direct call plugin file
 if (!defined('ABSPATH')) die('Something wrong? O_o');
@@ -453,7 +453,7 @@ function aio_admin_page() {
 		if (isset($_POST['mincomlength']) && $_POST['mincomlength'] != "" && is_numeric($options['mincomlength']))
 			$options['mincomlength'] = $_POST['mincomlength'];
 		if (isset($_POST['mincomlengtherror']) && $_POST['mincomlengtherror'] != "")
-			$options['mincomlengtherror'] = $_POST['mincomlengtherror'];
+			$options['mincomlengtherror'] = htmlspecialchars($_POST['mincomlengtherror'], ENT_QUOTES);
 		update_option('MinComLengthOptions', $options);
     $mincom_updated = true; # added by Nikolay
 	}
@@ -473,7 +473,7 @@ function aio_admin_page() {
         <td>
           <input type="text" value="<?php echo $options['mincomlength']; ?>" name="mincomlength" id="mincomlength" size="4" />
         </td><td>
-          <input type="text" value="<?php echo $options['mincomlengtherror']; ?>" name="mincomlengtherror" id="mincomlengtherror" size="50" />
+          <input type="text" value="<?php echo stripslashes($options['mincomlengtherror']); ?>" name="mincomlengtherror" id="mincomlengtherror" size="50" />
         </td>
       </tr>
     </table>
@@ -506,7 +506,7 @@ function aio_admin_page() {
         </td>
       </tr><tr>
         <td>
-          <textarea name="feedcopyright-text" cols="60" rows="4" style="width: 99%;"><?php print(get_option($aio_plugins['feed-copyright'][optionName])); ?></textarea>
+          <textarea name="feedcopyright-text" cols="60" rows="4" style="width: 99%;"><?php print(stripslashes(get_option($aio_plugins['feed-copyright'][optionName]))); ?></textarea>
         </td>
       </tr>
     </table>
@@ -752,7 +752,7 @@ if(!function_exists($aio_plugins['minimum-comment-length'][cell_function])
   		$options['mincomlengtherror'] = __('Error: Your comment is too short. Please try to say something useful.', 'wp-all-in-one-tools');
 
   	if (strlen($commentdata['comment_content']) < $options['mincomlength']) {
-  		wp_die($options['mincomlengtherror']);
+  		wp_die(stripslashes($options['mincomlengtherror']));
   	} else {
   		return $commentdata;
   	}
@@ -772,7 +772,7 @@ if(!function_exists($aio_plugins['feed-copyright'][cell_function])
   function addCopyrightToFeed($content) {
     global $aio_plugins;
     if(is_feed()) {
-      return $content.get_option($aio_plugins['feed-copyright'][optionName]);
+      return $content.stripslashes(get_option($aio_plugins['feed-copyright'][optionName]));
     } else {
       return $content;
     }

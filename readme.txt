@@ -3,7 +3,7 @@ Contributors: Nikolay (cmepthuk)
 Donate link: http://infine.ru/
 Tags: admin, plugin, plugins, security, secure, patch, usebility, rss, feed, etc
 Tested up to: 2.6
-Stable tag: 0.3
+Stable tag: 0.3.1
 Requires at least: 2.2
 
 A very usefull Wordpress Plugin. It unites much functions and patches in-one.
